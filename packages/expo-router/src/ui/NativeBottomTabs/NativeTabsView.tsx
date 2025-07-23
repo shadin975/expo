@@ -12,6 +12,7 @@ import {
   BottomTabs,
   BottomTabsScreen,
   featureFlags,
+  enableFreeze,
   type BottomTabsScreenProps,
 } from 'react-native-screens';
 
@@ -53,6 +54,8 @@ export interface NativeTabsViewProps {
     >
   >;
 }
+
+enableFreeze(false);
 
 export function NativeTabsView(props: NativeTabsViewProps) {
   const { builder, style } = props;

@@ -6,12 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.NativeTabs = exports.createNativeTabNavigator = void 0;
 const native_1 = require("@react-navigation/native");
 const react_1 = __importDefault(require("react"));
-const react_native_screens_1 = require("react-native-screens");
 const NativeBottomTabsRouter_1 = require("./NativeBottomTabsRouter");
 const NativeTabsView_1 = require("./NativeTabsView");
 const __1 = require("../..");
 const TabOptions_1 = require("./TabOptions");
-(0, react_native_screens_1.enableFreeze)(true);
 function NativeTabsNavigator({ children, ...rest }) {
     const builder = (0, native_1.useNavigationBuilder)(NativeBottomTabsRouter_1.NativeBottomTabsRouter, {
         children,
