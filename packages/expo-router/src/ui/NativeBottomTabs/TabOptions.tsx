@@ -7,7 +7,7 @@ import { AndroidIcon, Badge, Icon, IOSIcon, Title } from './NavigatorElements';
 export type TabProps = PropsWithChildren<{
   name: string;
   hidden?: boolean;
-  options?: NativeTabOptions;
+  options?: Omit<NativeTabOptions, 'hidden' | 'specialEffects'>;
   popToRoot?: boolean;
   disableScrollToTop?: boolean;
 }>;

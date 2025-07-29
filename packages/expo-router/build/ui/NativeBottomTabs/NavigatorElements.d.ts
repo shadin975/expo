@@ -1,5 +1,5 @@
-import type { SFSymbol } from 'sf-symbols-typescript';
 import type { ImageSourcePropType } from 'react-native';
+import type { SFSymbol } from 'sf-symbols-typescript';
 interface TitleProps {
     children: string;
 }

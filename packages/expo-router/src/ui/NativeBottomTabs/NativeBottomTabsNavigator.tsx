@@ -12,7 +12,6 @@ import { enableFreeze } from 'react-native-screens';
 import { NativeBottomTabsRouter } from './NativeBottomTabsRouter';
 import { NativeTabOptions, NativeTabsView, type NativeTabsViewProps } from './NativeTabsView';
 import { withLayoutContext } from '../..';
-import { BottomTabAccessoryProvider } from './NativeTabsViewContext';
 import { Tab } from './TabOptions';
 
 enableFreeze(true);
@@ -31,11 +30,7 @@ function NativeTabsNavigator({
     children,
   });
 
-  return (
-    <BottomTabAccessoryProvider>
-      <NativeTabsView builder={builder} {...rest} />
-    </BottomTabAccessoryProvider>
-  );
+  return <NativeTabsView builder={builder} {...rest} />;
 }
 
 export const createNativeTabNavigator = createNavigatorFactory(NativeTabsNavigator);
@@ -44,8 +39,7 @@ const NTN = withLayoutContext<NativeTabOptions, typeof NativeTabsNavigator, Navi
   createNativeTabNavigator().Navigator,
   (screens) => {
     return screens;
-  },
-  true
+  }
 );
 
 export const NativeTabs = Object.assign(
