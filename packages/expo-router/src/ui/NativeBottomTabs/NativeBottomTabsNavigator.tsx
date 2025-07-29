@@ -10,7 +10,8 @@ import React, { ComponentProps, PropsWithChildren } from 'react';
 import { enableFreeze } from 'react-native-screens';
 
 import { NativeBottomTabsRouter } from './NativeBottomTabsRouter';
-import { NativeTabOptions, NativeTabsView, type NativeTabsViewProps } from './NativeTabsView';
+import { NativeTabsView } from './NativeTabsView';
+import { NativeTabOptions, type NativeTabsViewProps } from './types';
 import { withLayoutContext } from '../..';
 import { Tab } from './TabOptions';
 
